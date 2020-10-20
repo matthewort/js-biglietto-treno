@@ -6,20 +6,26 @@ console.log("quanti km: ", richiestaKm);
 var richiestaEta = prompt("età");
 console.log("età: ", richiestaEta);
 
-// numero km
-// var numeroKm = Math.floor(0.21 * 100) + 1;
-// console.log("numero km: ", numeroKm);
+// prezzo biglietto
+var price = 0.21;
+console.log("prezzo: ", 0.21 * richiestaKm);
 
+// sconto minorenne
+var scontoMinorenne = 20 * richiestaKm / 100;
+
+// sconto over65
+var scontoOver65 = 40 * richiestaKm / 100;
 
 // condizioni età
 if (richiestaEta <= 17) {
   // sconto 20%
-  console.log("minorenne!");
+  console.log("minorenne!", scontoMinorenne);
 } else if (richiestaEta >= 66) {
   // sconto 40%
-  console.log("over 65!");
+  console.log("over 65!", scontoOver65);
 } else {
   console.log("nessuno sconto");
 }
+
 
 // prezzo totale del viaggio
